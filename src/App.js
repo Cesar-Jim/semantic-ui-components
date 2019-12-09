@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+// Components
+import Navbar from './components/Navbar/Navbar';
+
+// Styles
+
+let mainHeaderStyle = {
+  borderBottom: '1px solid #e8e8e8',
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='ui sixteen column centered grid' style={mainHeaderStyle}>
+        <div className='row'>
+          <h2 className='ui icon header'>
+            <i className='settings icon'></i>
+            <div className='content'>
+              Semantic UI Components Library
+              <div className='sub header'>
+                My reusable componentes from{' '}
+                <a className='ui link' href='https://semantic-ui.com/'>
+                  semantic-ui
+                </a>
+              </div>
+              <div className='sub header tiny'>
+                <em>by Cesar Jimenez</em>
+              </div>
+            </div>
+          </h2>
+        </div>
+      </div>
+      <Navbar />
+    </>
   );
-}
+};
 
 export default App;
